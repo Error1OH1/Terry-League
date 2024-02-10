@@ -1,0 +1,93 @@
+{
+  "RootObject": {
+    "Id": "fb218622-be32-404e-8ff3-72532b8f0b48",
+    "Name": "Player",
+    "Position": "-104.7203,-82.10379,46.4731",
+    "Components": [
+      {
+        "__type": "PlayerController",
+        "animationHelper": {
+          "_type": "component",
+          "go": "17150137-41f5-44d1-959f-6c4c06a11693",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "controller": {
+          "_type": "component",
+          "go": "fb218622-be32-404e-8ff3-72532b8f0b48",
+          "component_type": "CharacterController"
+        },
+        "CrouchSpeed": 64,
+        "eye": {
+          "_type": "gameobject",
+          "go": "ce8936ed-9401-4878-a5c8-95b05f5b245f"
+        },
+        "RunSpeed": 190,
+        "SprintSpeed": 320,
+        "WalkSpeed": 190
+      },
+      {
+        "__type": "CharacterController",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18
+      }
+    ],
+    "Children": [
+      {
+        "Id": "ce8936ed-9401-4878-a5c8-95b05f5b245f",
+        "Name": "eye",
+        "Position": "0,0,64",
+        "Enabled": true
+      },
+      {
+        "Id": "17150137-41f5-44d1-959f-6c4c06a11693",
+        "Name": "body",
+        "Position": "-199.9722,-64.37138,47.39056",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "CitizenAnimationHelper",
+            "BodyWeight": 1,
+            "EyeSource": {
+              "_type": "gameobject",
+              "go": "ce8936ed-9401-4878-a5c8-95b05f5b245f"
+            },
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": {
+              "_type": "component",
+              "go": "17150137-41f5-44d1-959f-6c4c06a11693",
+              "component_type": "SkinnedModelRenderer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
