@@ -1,0 +1,34 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "soccerfield",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "soccerfield",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "fdd.fence_wood#35312",
+        "sugmatextures.grass3#35090",
+        "titanovsky.ufrts_resource_pinetree_group#41234",
+        "titanovsky.ufrts_resource_tree_group_cut#41240",
+        "chunky.grass_001#32499",
+        "sugmatextures.grass4#37035",
+        "thefirm.grass-top#23477",
+        "fish.gt_grass_tall_a#23016"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/soccerfield.vmap"
+      }
+    }
+  }
+}

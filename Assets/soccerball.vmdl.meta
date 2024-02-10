@@ -1,0 +1,25 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "S\u0026BoxSoccerBall",
+      "Type": "model",
+      "Org": "rorre",
+      "Ident": "soccerball",
+      "Tags": "sports ball soccer futbol",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "assets/soccerball.vmdl"
+      }
+    }
+  }
+}

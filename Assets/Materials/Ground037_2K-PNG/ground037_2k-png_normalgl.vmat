@@ -1,0 +1,11 @@
+
+Layer0
+{
+	shader "shaders/complex.shader_c"
+
+	TextureColor "assets/materials/ground037_2k-png/ground037_2k-png_color.png"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "assets/materials/ground037_2k-png/ground037_2k-png_normaldx.png"
+	TextureRoughness "assets/materials/ground037_2k-png/ground037_2k-png_roughness.png"
+
+}

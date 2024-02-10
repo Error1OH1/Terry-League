@@ -1,0 +1,578 @@
+{
+  "Id": "5d1c12b7-0faf-47ca-9b24-9c2ee5482edc",
+  "GameObjects": [
+    {
+      "Id": "f0190e30-b79f-469f-a54b-26473302f685",
+      "Name": "Ball Spawn",
+      "Position": "65.30534,60.96982,308.7996",
+      "Scale": "4,4,4",
+      "Enabled": true
+    },
+    {
+      "Id": "581b35b4-ad5e-41a9-8517-65a1836e7c43",
+      "Name": "Sun",
+      "Position": "65.30534,161.9163,102.7467",
+      "Rotation": "0.09229585,0.7010574,0.09229594,0.7010574",
+      "Scale": "4,4,4",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "865f8cfb-43c7-43e7-abe6-3e6a77b527c4",
+      "Name": "MAP",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "maps/soccerfield.vmap",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "52f32d44-327a-44dc-85c9-8f29d825b0a1",
+      "Name": "blue_goalpost",
+      "Position": "61.02165,554.3264,64.1368",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "1.5,1.5,1.5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "assets/models/goalpost.vmdl",
+          "RenderType": "On",
+          "Tint": "0,0.10814,0.72093,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "assets/models/goalpost.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "f6cf33cd-e9cc-4637-8464-49dc0179f051",
+      "Name": "red_goalpost",
+      "Position": "79.27066,-407.046,62.64519",
+      "Rotation": "0,0,-0.7071066,0.7071068",
+      "Scale": "1.5,1.5,1.5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "assets/models/goalpost.vmdl",
+          "RenderType": "On",
+          "Tint": "1,0,0,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "assets/models/goalpost.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "8db712ce-4da7-4c8e-9f15-df55a83b9c1d",
+      "Name": "soccer",
+      "Position": "65.30534,60.96982,308.7996",
+      "Scale": "4,4,4",
+      "Tags": "solid",
+      "Networked": true,
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "assets/models/soccer.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0.05,
+          "Gravity": true,
+          "LinearDamping": 0.05,
+          "Locking": {},
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "SphereCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Radius": 10,
+          "Static": false,
+          "Surface": "assets/models/ball.surface"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "6c82ca1c-6d06-42d5-a374-ad11c5a8d71e",
+          "Name": "collision",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SphereCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 9,
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "6720d516-739d-4357-817c-6a1dd6a82cc1",
+      "Name": "Camera",
+      "Position": "-64.88014,-246.1525,202.6146",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "1375b6df-c124-4572-bd31-13e3e709f8fb",
+      "Name": "Cube",
+      "Position": "755.5451,113.5446,515.8702",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "6.200002,1969.901,842.8",
+          "Static": false,
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "19c40231-a4a7-418d-9473-fbf45a4d86f2",
+          "Name": "Left Wall",
+          "Position": "14.29688,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "6.200002,1969.901,842.8",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "c01184ea-e62d-4410-af9f-9782f64f4aee",
+          "Name": "Right Wall",
+          "Position": "-1531.848,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "6.200002,1969.901,842.8",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "19f1e2df-f10f-4e0c-ac2d-8642421ae9b5",
+          "Name": "Front Wall",
+          "Position": "-868.8795,-809.4142,0",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "6.200002,1969.901,842.8",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "d509afb7-565e-4d55-aa1f-7a67dce93e08",
+          "Name": "Back Wall",
+          "Position": "-868.8798,714.9184,0",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "6.200002,1969.901,842.8",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "9c9ea23d-e9a5-4f5f-809d-4bf12a5ce5c8",
+      "Name": "Ceiling",
+      "Position": "115.1718,113.5446,515.8702",
+      "Rotation": "0,0.7071067,0,0.7071068",
+      "Scale": "2.525078,2.525078,2.525078",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "6.200002,1969.901,842.8",
+          "Static": false,
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "7c748623-ea10-4fab-bdcc-afeaa45db4c6",
+          "Name": "Corner Barrier (2)",
+          "Position": "172.4335,-318.281,-337.0529",
+          "Rotation": "-0.3155092,-0.632814,0.3155092,0.6328142",
+          "Scale": "0.3960274,1.30689,2.217752",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "7653bb70-6738-4607-bdd3-0f375577647e",
+          "Name": "Corner Barrier (1)",
+          "Position": "172.4336,-309.6276,253.1962",
+          "Rotation": "0.2290442,-0.6689833,-0.2290442,0.6689835",
+          "Scale": "0.3960274,1.30689,2.217752",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "00d325c9-18c2-4f1d-afab-c61badcfbdd6",
+          "Name": "Corner Barrier",
+          "Position": "172.4335,273.6281,-337.2234",
+          "Rotation": "0.2290442,-0.6689833,-0.2290442,0.6689835",
+          "Scale": "0.3960274,1.30689,2.217752",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "0cb26942-c015-4010-a475-068abdfb06ac",
+          "Name": "Corner Barrier (3)",
+          "Position": "172.4336,280.4822,253.0457",
+          "Rotation": "-0.3155092,-0.632814,0.3155092,0.6328142",
+          "Scale": "0.3960274,1.30689,2.217752",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "43b3fcc5-aad0-4a1d-bb41-069bd5c6480d",
+      "Name": "ServerHost",
+      "Position": "-349.7092,688.477,97.64552",
+      "Tags": "solid",
+      "Networked": true,
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "NetworkHelper",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "assets/models/playercontroller.prefab"
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "10901f34-c5e7-4d85-95c0-5aaec69bb5d5"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fe32df21-0b3a-48a3-9f6a-dc4a02382adf"
+            }
+          ],
+          "StartServer": true
+        },
+        {
+          "__type": "ServerHost"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "10901f34-c5e7-4d85-95c0-5aaec69bb5d5",
+          "Name": "Red Team",
+          "Position": "362.1396,-337.0833,6.389877",
+          "Enabled": true
+        },
+        {
+          "Id": "fe32df21-0b3a-48a3-9f6a-dc4a02382adf",
+          "Name": "Blue Team",
+          "Position": "362.1396,-873.8029,6.389832",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "dd6d0f67-96a5-46d9-bc76-6a2a8a1ff93d",
+      "Name": "RedGoal",
+      "Position": "78.58472,-371.6201,117.0285",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "212.4999,43.10001,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Goal",
+          "Ball": {
+            "_type": "gameobject",
+            "go": "8db712ce-4da7-4c8e-9f15-df55a83b9c1d"
+          },
+          "BallRespawn": {
+            "_type": "gameobject",
+            "go": "f0190e30-b79f-469f-a54b-26473302f685"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "d5d9c62c-03ce-44ad-be21-354451938c14",
+      "Name": "2D Skybox",
+      "Position": "319.2039,46.36996,372.6786",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "SkyMaterial": "materials/sky/sky_005.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "og_field",
+  "Description": "",
+  "LastSaved": "2024-02-10T09:38:39.4678569-06:00",
+  "__references": [
+    "caro.sky_001"
+  ]
+}

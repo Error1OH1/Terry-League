@@ -1,0 +1,28 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "goalfield",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "goalfield",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "chunky.grass_001#32499",
+        "fdd.fence_wood#35312"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/goalfield.vmap"
+      }
+    }
+  }
+}

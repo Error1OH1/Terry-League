@@ -1,0 +1,163 @@
+{
+  "RootObject": {
+    "Id": "1bb960de-1c27-4dbb-997c-a27b7099d606",
+    "Name": "playercontroller",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "PlayerMovement",
+        "AirControl": 0.1,
+        "Body": {
+          "_type": "gameobject",
+          "go": "80a0d23e-a65d-4076-9042-a74c510e563c"
+        },
+        "CrouchSpeed": 90,
+        "GroundControl": 4,
+        "Head": {
+          "_type": "gameobject",
+          "go": "f3d5969c-d008-4c39-97a0-31bb12728a97"
+        },
+        "JumpForce": 400,
+        "MaxForce": 50,
+        "RunSpeed": 290,
+        "Speed": 160
+      },
+      {
+        "__type": "CharacterController",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 7.2,
+        "StepHeight": 18
+      },
+      {
+        "__type": "CitizenAnimationHelper",
+        "BodyWeight": 1,
+        "EyeSource": {
+          "_type": "gameobject",
+          "go": "f3d5969c-d008-4c39-97a0-31bb12728a97"
+        },
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "Height": 1,
+        "IkLeftFoot": null,
+        "IkLeftHand": null,
+        "IkRightFoot": null,
+        "IkRightHand": null,
+        "LookAt": null,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "go": "80a0d23e-a65d-4076-9042-a74c510e563c",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "CapsuleCollider",
+        "End": "1.4,0,56.00005",
+        "IsTrigger": false,
+        "Radius": 15.700017,
+        "Start": "1.4,0,0",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "80a0d23e-a65d-4076-9042-a74c510e563c",
+        "Name": "Body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "CitizenAnimationHelper",
+            "BodyWeight": 1,
+            "EyeSource": {
+              "_type": "gameobject",
+              "go": "f3d5969c-d008-4c39-97a0-31bb12728a97"
+            },
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": {
+              "_type": "component",
+              "go": "80a0d23e-a65d-4076-9042-a74c510e563c",
+              "component_type": "SkinnedModelRenderer"
+            }
+          }
+        ]
+      },
+      {
+        "Id": "f3d5969c-d008-4c39-97a0-31bb12728a97",
+        "Name": "Head",
+        "Position": "0,0,65.0479",
+        "Enabled": true
+      },
+      {
+        "Id": "809f586f-9109-4c19-aecb-bfd84e7dbeff",
+        "Name": "Camera",
+        "Position": "0,0,65.04603",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "CameraComponent",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          },
+          {
+            "__type": "CameraMovement",
+            "Body": {
+              "_type": "gameobject",
+              "go": "80a0d23e-a65d-4076-9042-a74c510e563c"
+            },
+            "Distance": 175,
+            "Head": {
+              "_type": "gameobject",
+              "go": "f3d5969c-d008-4c39-97a0-31bb12728a97"
+            },
+            "Player": {
+              "_type": "component",
+              "go": "1bb960de-1c27-4dbb-997c-a27b7099d606",
+              "component_type": "PlayerMovement"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

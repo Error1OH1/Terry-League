@@ -1,0 +1,117 @@
+{
+  "RootObject": {
+    "Id": "77795ff7-5245-4c79-a0cb-91713fa3b8e2",
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 341,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "PlayerMovement",
+        "AirControl": 0.1,
+        "Body": {
+          "_type": "gameobject",
+          "go": "42ca4ce8-842b-4431-a39a-4c9c24a1eedb"
+        },
+        "CrouchSpeed": 90,
+        "GroundControl": 4,
+        "Head": {
+          "_type": "gameobject",
+          "go": "0b43bb91-144b-499e-a178-d60f4a7ae8b7"
+        },
+        "JumpForce": 400,
+        "MaxForce": 50,
+        "RunSpeed": 330,
+        "Speed": 210
+      },
+      {
+        "__type": "CharacterController",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 9.42,
+        "StepHeight": 18
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,0,36.3",
+        "IsTrigger": false,
+        "Scale": "40,40,50",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "42ca4ce8-842b-4431-a39a-4c9c24a1eedb",
+        "Name": "Body",
+        "Position": "149.995,149.995,-212.125",
+        "Enabled": true
+      },
+      {
+        "Id": "0b43bb91-144b-499e-a178-d60f4a7ae8b7",
+        "Name": "Head",
+        "Position": "0,0,65.0479",
+        "Enabled": true
+      },
+      {
+        "Id": "9e8491dc-61d4-4b0d-b755-00ffb3f6a594",
+        "Name": "Camera",
+        "Position": "0,0,65.04603",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "CameraComponent",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          },
+          {
+            "__type": "CameraMovement",
+            "Body": {
+              "_type": "gameobject",
+              "go": "42ca4ce8-842b-4431-a39a-4c9c24a1eedb"
+            },
+            "Distance": 1000,
+            "Head": {
+              "_type": "gameobject",
+              "go": "0b43bb91-144b-499e-a178-d60f4a7ae8b7"
+            },
+            "Player": {
+              "_type": "component",
+              "go": "77795ff7-5245-4c79-a0cb-91713fa3b8e2",
+              "component_type": "PlayerMovement"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

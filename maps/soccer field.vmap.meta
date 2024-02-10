@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "soccer field",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "soccerfield",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "chunky.grass_001#32499"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/soccer field.vmap"
+      }
+    }
+  }
+}
